@@ -5,9 +5,9 @@ module logic_gates_tb(
     $monitor("CE= a=%b b=%b and_gate=%b or_gate=%b not_gate=%b nand_gate=%b nor_gate=%b xor_gate=%b xnor_gate=%b",$time,a,b,and_gate,or_gate,not_gate,nand_gate,nor_gate,xor_gate,xnor_gate);
 
     #1 a=1'b0;b=1'b0;
-    #1 a=1'b0;b=1'b0;
-    #1 a=1'b0;b=1'b0;
-    #1 a=1'b0;b=1'b0;
+    #1 a=1'b0;b=1'b1;
+    #1 a=1'b1;b=1'b0;
+    #1 a=1'b1;b=1'b1;
   end
 endmodule
   
