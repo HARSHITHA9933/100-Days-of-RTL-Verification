@@ -1,6 +1,6 @@
 /*using nand gates complement of and gate*/
 
-module ha_nor(input a,b,output reg carry);
+module ha_nand(input a,b,output reg carry);
   wire w1,w2,w3;
   assign w1=~(a&b);
   assign w2=~(w1|a);
