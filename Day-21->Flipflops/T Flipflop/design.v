@@ -1,6 +1,10 @@
-module nandlatch(s,r,en,q,qn);
-  input wire s,r,en;
-  output reg q,qn;
-  assign q=~(s&qn);
-  assign qn=~(r&q);
+module tff(t,clk,q);
+  input wire t,clk;
+  output reg q=1;
+  always @(posedge clk) begin
+    if(t)
+      q<=~q;
+    else
+      q<=q;
+  end
 endmodule
