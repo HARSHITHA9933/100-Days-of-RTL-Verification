@@ -1,8 +1,8 @@
-`include "srff_using_dff.v"
-module srff_using_dff_test;
+`include "srff_using_jkff.v"
+module srff_using_jkff_test;
   reg s,r,clk;
   wire q;
-  srff_using_dff inst(.s(s), .r(r), .clk(clk), .q(q));
+  srff_using_jkff inst(.s(s), .r(r), .clk(clk), .q(q));
   initial begin
     clk=0;
     forever #5 clk=~clk;
@@ -17,4 +17,3 @@ module srff_using_dff_test;
     $finish;
   end
 endmodule
-
