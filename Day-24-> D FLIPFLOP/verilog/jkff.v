@@ -1,4 +1,4 @@
-odule jk_flipflop(
+module jk_flipflop(
     input j,k,clk,reset,
     output reg q
     );
