@@ -5,7 +5,7 @@ wire [3:0] q;
 always #10 clk=-clk;
 sipo reg inst(.clk(clk), d(d), .q(q));
 initial begin
-$monitor("Time=>%ot q=%b d=%b", $time,q,d);
+  $monitor("Time=>%0t q=%b d=%b", $time,q,d);
 clk=0;
 #10 d=0;
 #20 d=1;
