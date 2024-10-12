@@ -8,10 +8,10 @@ endmodule
 module siso_reg(d,clk,q);
 input d;
 input clk;
-  output [3:0]q;
+  output q;
   wire q1,q2,q3
-  d_siso_reg a(d,clk,q[0]);
-  d_siso_reg b(q[0],clk,q[1]);
-  d_siso_reg c(q[1],clk,q[2]);
-d siso rege(q[2],clk,q[3]);
+  d_siso_reg a(d,clk,q1);
+  d_siso_reg b(q1,clk,q2);
+  d_siso_reg c(q2,clk,q3);
+  d siso_reg e(q3,clk,q);
 endmodule
