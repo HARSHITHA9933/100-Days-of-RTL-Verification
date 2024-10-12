@@ -13,5 +13,5 @@ input clk;
   d_siso_reg a(d,clk,q1);
   d_siso_reg b(q1,clk,q2);
   d_siso_reg c(q2,clk,q3);
-  d siso_reg e(q3,clk,q);
+  d_siso_reg e(q3,clk,q);
 endmodule
