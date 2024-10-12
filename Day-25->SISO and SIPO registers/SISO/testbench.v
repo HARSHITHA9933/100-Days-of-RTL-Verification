@@ -1,4 +1,4 @@
-`include "siso reg.v
+`include "siso reg.v"
 module siso_reg_test();
 reg d,clk;
 wire q;
