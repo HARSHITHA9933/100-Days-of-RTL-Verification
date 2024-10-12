@@ -2,7 +2,7 @@
 module siso_reg_test();
 reg d,clk;
 wire q;
-siso regal.d(d), clk(clk), .q(q));
+  siso reg(.d(d), clk(clk), .q(q));
 initial begin
 clk=1'b0;
 forever #5 clk=-clk;
