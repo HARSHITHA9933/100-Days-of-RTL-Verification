@@ -1,4 +1,4 @@
-'include "sipo reg.v"
+`include "sipo reg.v"
 module sipo_reg_test;
 reg clk,d;
 wire [3:0] q;
