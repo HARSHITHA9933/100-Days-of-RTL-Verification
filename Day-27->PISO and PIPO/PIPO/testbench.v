@@ -1,5 +1,5 @@
 `include "dffpipo.v"
-module dffpiso_test(a,clk,qn);
+module dffpipo_test(a,clk,qn);
   input wire [3:0]qn;
   output reg [3:0]a;
   dffpipo inst(.a(a), .clk((clk), .qn(qn));
