@@ -16,4 +16,5 @@ module jkff(
                 endcase
                 end          
          end
+endmodule
 
