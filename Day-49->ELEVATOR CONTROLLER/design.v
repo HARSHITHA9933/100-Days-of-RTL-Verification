@@ -1,4 +1,4 @@
-module bcd27seg(input wire [6:0] sseg, output reg[3:0]bcd);
+module bcd72seg(input wire [6:0] sseg, output reg[3:0]bcd);
   always @(*) begin
     case(seg)
       7'b1000000:bcd=4'b0000;
