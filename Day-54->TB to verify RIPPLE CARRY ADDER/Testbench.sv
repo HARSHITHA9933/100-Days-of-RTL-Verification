@@ -12,7 +12,7 @@
 module top;
   intf duv_if();
   test test_h;
-  ripplecarryadder dut(.a(duv_if.a), .b(duv_if.b), .cin(duv_if.cin), .sum(duv_if.sum), .carry(duv_if.carry));
+  ripplecarryadder dut(.a(duv_if.a), .b(duv_if.b), .cin(duv_if.cin), .sum(duv_if.sum), .carryout(duv_if.carryout));
   initial begin
     test_h=new(duv_if,duv_if,duv_if);
     test_h.build_run();
