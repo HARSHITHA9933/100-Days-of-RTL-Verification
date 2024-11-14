@@ -15,19 +15,19 @@ class refmodel;
     return (a & b) | (b & c) | (c & a);
   endfunction
   virtual task ref_logic(transaction wrmon_data);
-     // bit c0, c1, c2, c3; // Temporary carry bits
+     bit c0, c1, c2, c3; // Temporary carry bits
   // First stage
       wrmon_data.sum[0] = calc_sum(wrmon_data.a[0], wrmon_data.b[0], wrmon_data.cin);
-      wrmon_data.carry[0] = calc_carry(wrmon_data.a[0], wrmon_data.b[0], wrmon_data.cin);  
+     c0 = calc_carry(wrmon_data.a[0], wrmon_data.b[0], wrmon_data.cin);  
       // Second stage
-      wrmon_data.sum[1] = calc_sum(wrmon_data.a[1], wrmon_data.b[1], wrmon_data.carry[0]);
-      wrmon_data.carry[1] = calc_carry(wrmon_data.a[1], wrmon_data.b[1], wrmon_data.carry[0]);  
+    wrmon_data.sum[1] = calc_sum(wrmon_data.a[1], wrmon_data.b[1], c0);
+    c1= calc_carry(wrmon_data.a[1], wrmon_data.b[1], c0);  
       // Third stage
-      wrmon_data.sum[2] = calc_sum(wrmon_data.a[2], wrmon_data.b[2], wrmon_data.carry[1]);
-      wrmon_data.carry[2] = calc_carry(wrmon_data.a[2], wrmon_data.b[2], wrmon_data.carry[1]);   
+    wrmon_data.sum[2] = calc_sum(wrmon_data.a[2], wrmon_data.b[2], c1);
+    c2 = calc_carry(wrmon_data.a[2], wrmon_data.b[2],c1);   
       // Fourth stage
-      wrmon_data.sum[3] = calc_sum(wrmon_data.a[3], wrmon_data.b[3], wrmon_data.carry[2]);
-      wrmon_data.carry[3] = calc_carry(wrmon_data.a[3], wrmon_data.b[3], wrmon_data.carry[2]);
+    wrmon_data.sum[3] = calc_sum(wrmon_data.a[3], wrmon_data.b[3], c2);
+    carryout = calc_carry(wrmon_data.a[3], wrmon_data.b[3], c2);
      //    bit c0, c1, c2, c3; // Temporary carry bit
    
   endtask
