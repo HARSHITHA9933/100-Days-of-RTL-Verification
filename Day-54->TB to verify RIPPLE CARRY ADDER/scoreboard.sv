@@ -18,7 +18,7 @@ class scoreboard;
       end
   endtask
   virtual task check(transaction rc_data);
-    if ((rm_data.sum== rc_data.sum)&&(rm_data.carry== rc_data.carry))
+    if ((rm_data.sum== rc_data.sum)&&(rm_data.carryout== rc_data.carryout))
       $display("compared sucessfully");
         else
           $display("not compared");
