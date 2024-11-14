@@ -12,7 +12,7 @@ class rdmonitor;
     forever begin
  #5;
       rddata.sum = rd_mon_inf.sum;  
-      rddata.carry=rd_mon_inf.carry;
+      rddata.carryout=rd_mon_inf.carryout;
     rddata.display("DATA FROM READ MONITOR");
      rdmon2sc.put(rddata);
     end
