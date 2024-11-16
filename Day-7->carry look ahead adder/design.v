@@ -22,6 +22,6 @@ module carrylook(a,b,cin, S, Cout);
   assign Cout= (w[7]|(w[6]&w[5])|(w[3]&w[4]&w[2]&w[1])|(w[6]&w[4]&w[2]&w[0]&cin));
   assign S[0]=cin^w[0];
   assign S[1]=cl^w[2];
-  assign 5[2]=c2^w[4];
-  assign 5[3]=c3^w[6];
+  assign S[2]=c2^w[4];
+  assign S[3]=c3^w[6];
   endmodule
