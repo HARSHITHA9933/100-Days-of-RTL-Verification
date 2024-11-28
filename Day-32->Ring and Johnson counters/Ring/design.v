@@ -8,7 +8,8 @@ module dff(q,qbar,d,clk,reset);
 endmodule      
 module ring_counter(q,qbar,clk,reset);
   input wire clk,reset;
-  output reg [3:0] d;
+  wire [3:0]d;
+  output reg [3:0] q,qbar;
   dff d1(q[0],qbar[0],d[0],clk,reset);
   dff d2(q[1],qbar[1],d[1],clk,reset);
   dff d3(q[2],qbar[2],d[2],clk,reset);
