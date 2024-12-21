@@ -1,7 +1,5 @@
 # 100-Days-of-RTL-Verification
-Day-1:Verilog Modelling Styles
-Day-2:Half adder
-Day-3:Full adder
+Day-1:Verilog Modelling Styles Day-2:Half adder Day-3:Full adder
 Day-4:Halfsubtractor
 Day-5:Fullsubtractor
 Day-6:Ripplecarryadder
