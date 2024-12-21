@@ -22,7 +22,8 @@ Day-20: 1x8 demux using 1x4 and 1x2
 Day-21: Flipflops
 Day-22: SR Flipflop
 Day-23: JK FLIPFLOP
-Day-24: D flipflopDay 25: T Flip-Flop
+Day-24: D flipflop
+Day 25: T Flip-Flop
 Day 26: SISO and SIPO Registers
 Day 27: PISO and PIPO
 Day 28: Barrel Shift Register
