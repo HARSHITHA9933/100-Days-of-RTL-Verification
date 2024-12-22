@@ -20,7 +20,7 @@ endclass
 packet2 pl, p2;
 module test;
   initial begin
-    pl = new;
+    p1 = new;
     pl.c = 1;
     pl.pkt.a = 2;
     pl.pkt.b = 3;
